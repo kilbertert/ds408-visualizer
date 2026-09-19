@@ -1,0 +1,21 @@
+# 现役实例定义：development host 的 claude user unit。
+# 安装位置 ~/.config/systemd/user/ds408-visualizer.service
+# 变更后：systemctl --user daemon-reload && systemctl --user restart ds408-visualizer
+[Unit]
+Description=DS408 Visualizer
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/claude/Projects/ds408-visualizer
+Environment=HOME=/home/claude
+ExecStart=/home/claude/miniconda3/bin/python3 -c "import app; app.main(host='127.0.0.1', port=8511)"
+Restart=on-failure
+RestartSec=5
+UMask=0027
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=default.target

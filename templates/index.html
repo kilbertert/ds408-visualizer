@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>408 数据结构可视化演示网站</title>
+  <link rel="stylesheet" href="/static/style.css?v=10">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>408 数据结构与组成原理可视化演示</h1>
+      <p>左侧看动态过程，右侧看代码高亮：理解每一行代码到底在做什么。</p>
+    </div>
+    <div class="badge">Python · 408 考研全科增强版</div>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar">
+      <div class="sidebar-title">考点目录</div>
+      <section class="topic-block">
+        <button class="topic-title" data-topic="sorting">排序</button>
+        <div class="topic-items">
+          <button class="algo-btn" data-id="bubble">冒泡排序</button>
+          <button class="algo-btn" data-id="selection">选择排序</button>
+          <button class="algo-btn" data-id="insertion">插入排序</button>
+          <button class="algo-btn" data-id="shell">希尔排序</button>
+          <button class="algo-btn" data-id="heap_sort">堆排序</button>
+          <button class="algo-btn" data-id="quick">快速排序</button>
+          <button class="algo-btn" data-id="merge">归并排序</button>
+          <button class="algo-btn" data-id="radix_sort">基数排序</button>
+          <button class="algo-btn" data-id="external_merge_sort">外部排序：多路平衡归并</button>
+          <button class="algo-btn" data-id="loser_tree">败者树</button>
+          <button class="algo-btn" data-id="optimal_merge_tree">最佳归并树</button>
+          <button class="algo-btn" data-id="replacement_selection">置换选择排序</button>
+          <button class="algo-btn" data-id="sorting_compare_table">内部排序综合比较表</button>
+          <button class="algo-btn" data-id="sorting_decision_skills">排序选择题速判技巧</button>
+        </div>
+      </section>
+
+      <section class="topic-block">
+        <button class="topic-title" data-topic="search">查找</button>
+        <div class="topic-items">
+          <button class="algo-btn" data-id="seq_search">顺序查找</button>
+          <button class="algo-btn" data-id="binary_search">折半查找</button>
+          <button class="algo-btn" data-id="block_search">分块查找</button>
+          <button class="algo-btn" data-id="hash_functions">散列函数构造</button>
+          <button class="algo-btn" data-id="hash_linear">散列表：线性探测</button>
+          <button class="algo-btn" data-id="hash_chain">散列表：链地址法</button>
+          <button class="algo-btn" data-id="hash_conflict_compare">散列冲突解决方法</button>
+        </div>
+      </section>
+
+      <section class="topic-block">
+        <button class="topic-title" data-topic="array-matrix">数组 / 特殊矩阵</button>
+        <div class="topic-items">
+          <button class="algo-btn" data-id="symmetric_matrix">对称矩阵压缩存储</button>
+          <button class="algo-btn" data-id="triangular_matrix">三角矩阵压缩存储</button>
+          <button class="algo-btn" data-id="tridiagonal_matrix">三对角矩阵压缩存储</button>
+          <button class="algo-btn" data-id="sparse_matrix">稀疏矩阵三元组表</button>
+        </div>
+      </section>
+
+      <section class="topic-block">
+        <button class="topic-title" data-topic="tree">树 / 二叉树 / 高级树</button>
+        <div class="topic-items">
+          <button class="algo-btn" data-id="binary_tree_create">普通二叉树创建</button>
+          <button class="algo-btn" data-id="complete_binary_tree">完全二叉树与顺序存储</button>
+          <button class="algo-btn" data-id="bst_insert">二叉排序树插入</button>
+          <button class="algo-btn" data-id="bst_search">二叉排序树查找</button>
+          <button class="algo-btn" data-id="bst_delete">二叉排序树删除</button>
+          <button class="algo-btn" data-id="tree_update">树结点修改：删旧插新</button>
+          <button class="algo-btn" data-id="preorder">先序遍历</button>
+          <button class="algo-btn" data-id="inorder">中序遍历</button>
+          <button class="algo-btn" data-id="postorder">后序遍历</button>
+          <button class="algo-btn" data-id="levelorder">层序遍历</button>
+          <button class="algo-btn" data-id="avl_insert">平衡二叉树 AVL 插入旋转总览</button>
+          <button class="algo-btn" data-id="avl_ll">AVL LL 型：右旋</button>
+          <button class="algo-btn" data-id="avl_rr">AVL RR 型：左旋</button>
+          <button class="algo-btn" data-id="avl_lr">AVL LR 型：先左后右</button>
+          <button class="algo-btn" data-id="avl_rl">AVL RL 型：先右后左</button>
+          <button class="algo-btn" data-id="btree_search">B 树查找</button>
+          <button class="algo-btn" data-id="btree_insert">B 树插入与分裂</button>
+          <button class="algo-btn" data-id="btree_delete">B 树删除借位/合并</button>
+          <button class="algo-btn" data-id="bplus_search">B+ 树范围查找</button>
+          <button class="algo-btn" data-id="bplus_insert">B+ 树插入与叶子链</button>
+          <button class="algo-btn" data-id="rb_insert">红黑树插入修正</button>
+          <button class="algo-btn" data-id="forest_convert">树 / 森林 / 二叉树转换</button>
+          <button class="algo-btn" data-id="huffman_tree">哈夫曼树构造与哈夫曼编码</button>
+          <button class="algo-btn" data-id="threaded_inorder">中序线索二叉树构造</button>
+          <button class="algo-btn" data-id="threaded_preorder">先序线索二叉树构造</button>
+          <button class="algo-btn" data-id="threaded_postorder">后序线索二叉树构造</button>
+          <button class="algo-btn" data-id="build_thread_pre_in">前序+中序构造并线索化</button>
+          <button class="algo-btn" data-id="build_thread_post_in">后序+中序构造并线索化</button>
+          <button class="algo-btn" data-id="build_thread_level_in">层次+中序构造并线索化</button>
+          <button class="algo-btn" data-id="traversal_compare">三种遍历对比演示</button>
+        </div>
+      </section>
+
+      <section class="topic-block">
+        <button class="topic-title" data-topic="graph">图</button>
+        <div class="topic-items">
+          <button class="algo-btn" data-id="graph_storage">图的存储：矩阵/表/十字链表/多重表</button>
+          <button class="algo-btn" data-id="graph_directed">有向图：邻接表与入度</button>
+          <button class="algo-btn" data-id="graph_undirected">无向图：DFS/BFS 思想</button>
+          <button class="algo-btn" data-id="graph_matrix_bfs">邻接矩阵 BFS：矩阵逐步变化</button>
+          <button class="algo-btn" data-id="graph_matrix_dfs">邻接矩阵 DFS：矩阵逐步变化</button>
+          <button class="algo-btn" data-id="graph_adjlist_bfs">邻接表 BFS：边表逐步变化</button>
+          <button class="algo-btn" data-id="graph_adjlist_dfs">邻接表 DFS：边表逐步变化</button>
+          <button class="algo-btn" data-id="dfs_forest_components">DFS 生成树/森林与连通分量</button>
+          <button class="algo-btn" data-id="graph_bfs">广度优先搜索 BFS</button>
+          <button class="algo-btn" data-id="graph_dfs">深度优先搜索 DFS</button>
+          <button class="algo-btn" data-id="dijkstra">Dijkstra 最短路径</button>
+          <button class="algo-btn" data-id="toposort">拓扑排序</button>
+          <button class="algo-btn" data-id="reverse_toposort">逆拓扑排序</button>
+          <button class="algo-btn" data-id="aoe_critical_path">AOE 网与关键路径</button>
+        </div>
+      </section>
+
+      <section class="topic-block">
+        <button class="topic-title" data-topic="expression">表达式 / 栈应用</button>
+        <div class="topic-items">
+          <button class="algo-btn" data-id="infix_to_postfix">复杂中缀转后缀：运算符栈</button>
+          <button class="algo-btn" data-id="expression_two_stack">表达式求值：双栈法</button>
+          <button class="algo-btn" data-id="expr_tree_convert">复杂三式互转：画树法</button>
+        </div>
+      </section>
+
+      <section class="topic-block">
+        <button class="topic-title" data-topic="string-set">串 / 集合</button>
+        <div class="topic-items">
+          <button class="algo-btn" data-id="kmp_next">KMP next 数组构造</button>
+          <button class="algo-btn" data-id="kmp_match">KMP 模式匹配</button>
+          <button class="algo-btn" data-id="kmp_nextval">KMP nextval 优化</button>
+          <button class="algo-btn" data-id="union_find">并查集：合并/查找/路径压缩</button>
+        </div>
+      </section>
+
+
+
+
+      <section class="topic-block">
+        <button class="topic-title" data-topic="computer-organization">计算机组成原理</button>
+        <div class="topic-items">
+          <button class="algo-btn" data-id="co_hardware_overview">硬件部件总览：主存/运算器/控制器</button>
+          <button class="algo-btn" data-id="co_model_machine">模型机：取指与 ADD 指令执行</button>
+          <button class="algo-btn" data-id="co_instruction_cycle">指令周期：取指/间址/执行/中断</button>
+          <button class="algo-btn" data-id="co_datapath_control">数据通路与控制信号</button>
+          <button class="algo-btn" data-id="co_memory_addressing">主存容量与 MAR/MDR 计算</button>
+          <button class="algo-btn" data-id="co_memory_components">存储器基本组成与读写原理</button>
+          <button class="algo-btn" data-id="co_sram_chip_design">SRAM 芯片组成存储器计算</button>
+          <button class="algo-btn" data-id="co_memory_cpu_connection">主存与 CPU 的连接</button>
+          <button class="algo-btn" data-id="co_cache_workflow">Cache 工作原理：命中与缺失</button>
+          <button class="algo-btn" data-id="co_cache_mapping">Cache 与主存三种映射方式</button>
+          <button class="algo-btn" data-id="co_cache_replacement">Cache 替换算法：FIFO/LRU/随机</button>
+          <button class="algo-btn" data-id="co_disk_working">磁盘存储器工作原理</button>
+          <button class="algo-btn" data-id="co_disk_access_time">磁盘读取时间计算</button>
+          <button class="algo-btn" data-id="co_instruction_addressing">指令寻址：顺序与跳跃</button>
+          <button class="algo-btn" data-id="co_operand_addressing">数据寻址方式与有效地址</button>
+          <button class="algo-btn" data-id="co_procedure_call">过程调用的机器级表示</button>
+          <button class="algo-btn" data-id="co_complement_overflow">补码加减与溢出判断</button>
+          <button class="algo-btn" data-id="co_floating_point">浮点数规格化与 IEEE 754 思路</button>
+          <button class="algo-btn" data-id="co_io_interrupt_dma">I/O：查询、中断、DMA</button>
+          <button class="algo-btn" data-id="co_performance_pipeline">CPU 性能公式与流水线基础</button>
+          <button class="algo-btn" data-id="co_exam_skills">组成原理 408 高频速判技巧</button>
+        </div>
+      </section>
+
+      <section class="topic-block">
+        <button class="topic-title" data-topic="exam-skills">408 高频总结 / 技巧</button>
+        <div class="topic-items">
+          <button class="algo-btn" data-id="sorting_compare_table">内部排序综合比较表</button>
+          <button class="algo-btn" data-id="sorting_decision_skills">排序选择题速判技巧</button>
+          <button class="algo-btn" data-id="tree_formula_skills">树与二叉树公式速记</button>
+          <button class="algo-btn" data-id="graph_algorithm_skills">图算法选型与复杂度技巧</button>
+          <button class="algo-btn" data-id="asl_hash_skills">查找 ASL 与散列表计算技巧</button>
+          <button class="algo-btn" data-id="code_template_skills">常考代码模板与易错顺序</button>
+        </div>
+      </section>
+
+      <section class="topic-block">
+        <button class="topic-title" data-topic="linear">线性结构</button>
+        <div class="topic-items">
+          <button class="algo-btn" data-id="stack">栈：进栈/出栈</button>
+          <button class="algo-btn" data-id="queue">队列：入队/出队</button>
+          <button class="algo-btn" data-id="sequential_queue">顺序循环队列实现</button>
+          <button class="algo-btn" data-id="linked_queue">链式队列实现</button>
+          <button class="algo-btn" data-id="deque_demo">双端队列实现与应用</button>
+          <button class="algo-btn" data-id="stack_recursion">栈在递归中的应用</button>
+          <button class="algo-btn" data-id="bracket_matching">栈在括号匹配中的应用</button>
+          <button class="algo-btn" data-id="seq_list_insert">顺序表插入</button>
+          <button class="algo-btn" data-id="seq_list_delete">顺序表删除</button>
+          <button class="algo-btn" data-id="linked_insert">单链表插入</button>
+          <button class="algo-btn" data-id="linked_delete">单链表删除</button>
+          <button class="algo-btn" data-id="doubly_linked_list">双链表插入与删除</button>
+          <button class="algo-btn" data-id="circular_linked_list">循环链表动态演示</button>
+          <button class="algo-btn" data-id="static_linked_list">静态链表动态演示</button>
+        </div>
+      </section>
+    </aside>
+
+    <section class="workspace">
+      <div class="toolbar card">
+        <div>
+          <div id="algoTitle" class="algo-title">请选择一个考点</div>
+          <div id="algoMeta" class="algo-meta">例如：树 → B+ 树范围查找</div>
+        </div>
+        <div class="control-row">
+          <button id="prevBtn">上一步</button>
+          <button id="playBtn" class="primary">自动播放</button>
+          <button id="nextBtn">下一步</button>
+          <button id="resetBtn">重置</button>
+          <label class="speed-label">速度
+            <input id="speedRange" type="range" min="250" max="1800" step="50" value="800">
+          </label>
+        </div>
+      </div>
+
+      <div id="mainGrid" class="main-grid">
+        <section class="visual-panel card">
+          <div class="panel-head">
+            <h2>动态演示区</h2>
+            <span id="stepCounter">0 / 0</span>
+          </div>
+          <div id="visualCanvas" class="visual-canvas empty">
+            <div class="empty-state">从左侧选择一个考点开始演示</div>
+          </div>
+          <div class="explain-box">
+            <div class="explain-label">当前步骤解释</div>
+            <div id="stepDesc">暂无步骤。</div>
+          </div>
+          <div class="result-box">
+            <div class="explain-label">当前输出 / 辅助信息</div>
+            <div id="resultText">—</div>
+          </div>
+        </section>
+
+        <div id="paneResizer" class="pane-resizer" role="separator" aria-orientation="vertical" aria-label="调整动态演示区和代码区宽度" aria-valuemin="30" aria-valuemax="80" aria-valuenow="58" tabindex="0" title="左右拖动调整宽度，双击恢复默认">
+          <span class="pane-resizer-grip" aria-hidden="true"></span>
+          <span id="paneResizeValue" class="pane-resizer-value" aria-hidden="true">58%</span>
+        </div>
+
+        <section class="code-panel card">
+          <div class="panel-head">
+            <h2>代码同步区</h2>
+            <span id="lineHint">代码行高亮</span>
+          </div>
+          <pre id="codeBlock" class="code-block"><code>// 选择左侧考点后，这里会显示对应代码
+// 左侧动画会随着代码行同步变化</code></pre>
+          <div class="tips-box">
+            <div class="explain-label">408 常考提醒</div>
+            <ul id="examTips"></ul>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <script src="/static/app.js?v=10"></script>
+</body>
+</html>
