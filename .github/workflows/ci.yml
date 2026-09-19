@@ -1,0 +1,16 @@
+name: ci
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: 语法检查
+        run: python3 -m compileall -q app.py tests/smoke.py
+      - name: 冒烟检查
+        run: python3 tests/smoke.py
